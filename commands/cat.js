@@ -12,3 +12,6 @@ module.exports.run = async (client, message) => {
 
   message.channel.send(embed);
 };
+module.exports.help = {
+name: "cat"
+}
