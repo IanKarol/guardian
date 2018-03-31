@@ -1,17 +1,20 @@
-const Discord = require('discord.js');
-const superagent = require('superagent');
+const Discord = require("discord.js");
+const superagent = require("superagent");
 
-module.exports.run = async (client, message) => {
-  const { body } = await superagent
-    .get('https://random.cat/meow');
+module.exports.run = async (bot,message,args) => {
 
-  const embed = new Discord.RichEmbed()
-    .setDescription(':cat: MEOW MEOW HISS SCRATCH!')
-    .setImage(body.file)
-    .setColor(0xD0D3D4);
+  let{body} = await superagent
+  .get(`https://random.cat/meow`);
 
-  message.channel.send(embed);
-};
+  let catembed = new Discord.RichEmbed()
+  .setColor("#7289DA")
+  .setTitle("Cat 🐱")
+  .setImage(body.file);
+
+  message.channel.send(catembed);
+
+}
+
 module.exports.help = {
-name: "cat"
+  name: "cat"
 }
