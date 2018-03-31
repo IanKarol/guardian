@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const Fortnite = require('fortnite');
-const stats = new Fortnite('dad42126-7f69-4e27-9a23-ca489ca95fa8');
+const stats = new Fortnite('apikey.fortnite');
 
 module.exports.run = async (bot, message, args, tools) => {
 
