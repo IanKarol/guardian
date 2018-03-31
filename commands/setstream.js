@@ -9,12 +9,14 @@ module.exports.run = (client, message, args) => {
       .setDescription('<:dmark:426081717242298370> Name streaming status!');
     message.channel.send({ embed });
   }
+  
+  else if (status.length !== 0) {
   client.user.setActivity(`${status}`, {  type: "STREAMING"});
   const embed = new Discord.RichEmbed()
     .setColor("#7289DA")
     .setDescription('<:cmark:426081678784462888> You sucessfully changed streaming status');
   message.channel.send({ embed });
-};
+  }};
 
 module.exports.help = {
   name: "stream"
