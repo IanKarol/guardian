@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const superagent = require('superagent');
 
-module.exports = async (client, message) => {
+module.exports.run = async (client, message) => {
   const { body } = await superagent
     .get('https://random.cat/meow');
 
