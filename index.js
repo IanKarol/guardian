@@ -26,7 +26,7 @@ fs.readdir("./commands/", (err, files) => {
 
 bot.on("ready", async () => {
   console.log(`${bot.user.username} is online on ${bot.guilds.size} servers!`);
-  bot.user.setActivity("Frosty Bridge", {type: "PLAYING"});
+  client.user.setPresence({ game: { name: 'Frosty Bridge', url: 'https://twitch.tv/iangtx', type: 1 } });
 });
 
 bot.on("guildMemberAdd", async member => {
