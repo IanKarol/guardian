@@ -29,8 +29,6 @@ module.exports.run = async (bot, message, args, tools) => {
     .addField("Kills", data.lifetimeStats[10].value, true)
     .addField("K/D Ratio", data.lifetimeStats[11].value, true)
     .addField("Kills Per Minute", data.lifetimeStats[12].value, true)
-    .addField("Time Played", data.lifetimeStats[13].value, true)
-    .addField("Average Survival Time", data.lifetimeStats[14].value, true)
 
     message.channel.send(embed);
 
