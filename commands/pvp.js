@@ -2,9 +2,8 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-	let user1 = message.guild.members.get(args[0]);
-	let user2 = message.guild.members.get(args[1]);
-	
+	let user1 = args[0];
+	let user2 = args[1]
 	let help = args[2];
 
 	if(!user2) return message.channel.send("Please provide who you want to fight!");
