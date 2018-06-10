@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
 	let pvpEmbed = new Discord.RichEmbed()
 	.setDescription("**PvP match has began**")
 	.setColor("#FF0000")
-	.addField(`${user1.user.username} ⚔ ${user2.user.username}`, results[result]);
+	.addField(`${user1.username} ⚔ ${user2.username}`, results[result]);
 
 	message.channel.send(pvpEmbed);
 
