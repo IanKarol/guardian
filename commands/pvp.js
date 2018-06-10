@@ -2,8 +2,8 @@ const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
 
-	let user1 = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-	let user2 = message.guild.member(message.mentions.users.second() || message.guild.members.get(args[1]));
+	let user1 = message.guild.members.get(args[0]);
+	let user2 = message.guild.members.get(args[1]);
 
 	if(!user2) return message.channel.send("Please provide who you want to fight!");
 	if(args[0] === "help") return message.channel.send("Command usage: `!pvp <user1> <user2>`");
